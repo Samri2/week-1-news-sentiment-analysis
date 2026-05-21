@@ -132,7 +132,46 @@ date
 bank
 source
 ```
+## Task 3: PostgreSQL Database Design
 
+A relational database was implemented using PostgreSQL to store processed fintech review data.
+
+### Database Name
+bank_reviews
+
+### Tables
+
+#### banks
+Stores bank metadata:
+- bank_id (PK)
+- bank_name
+- app_name
+
+#### reviews
+Stores user feedback:
+- review_id (PK)
+- bank_id (FK)
+- review_text
+- rating
+- review_date
+- sentiment_label
+- sentiment_score
+- identified_theme
+- source
+
+---
+
+### Setup Steps
+1. Create PostgreSQL database: bank_reviews
+2. Run schema file: create_schema.sql
+3. Run insert script: insert_data.py
+
+---
+
+### Verification Queries
+- Count reviews per bank
+- Average rating per bank
+- Null value validation
 ---
 
 # Installation
